@@ -5,10 +5,11 @@ let { agent } = require("./models/agent.model");
 let { customer } = require("./models/customer.model");
 let { ticketAgent } = require("./models/ticketAgent.model");
 let { ticketCustomer } = require("./models/ticketCustomer.model");
-let { Op } = require("@sequelize/core");
-let app = express();
+  let app = express();
 let port = 3000;
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));  
+
 
 //------------------------------------------------------------------------------------------------------------------------------------//
 
